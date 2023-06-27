@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <nav class="flow-root">
+        <ul class="float-left p-3 m-3">
+            <li class="mr-6">
+              <a class="text-blue-500 hover:text-blue-800" href="/">TARS</a>
+            </li>
+        </ul>
+        <ul class="float-right flex p-3 m-3 justify-end">
+             <li class="mr-6">
+              <a class="text-blue-500 hover:text-blue-800" href="\dashboard">Dashboard</a>
+            </li>
+            <li class="mr-6">
+              <a class="text-blue-500 hover:text-blue-800" href="\nodes">Nodes</a>
+            </li>
+            <li class="mr-6">
+              <a class="text-blue-500 hover:text-blue-800" href="\tars">Assessment</a>
+            </li>
+           
+            {% if Keys.HYPOTHESIS_KEY==None %}
+            <li class="mr-6">
+              <a class="text-blue-500 hover:text-blue-800" href="\save">Save</a>
+            </li>
+            {% endif %}
+            {% if Keys.HYPOTHESIS_KEY != None %}
+            <li class="mr-6">
+              <a class="text-blue-500 hover:text-blue-800" href="\forget">Forget</a>
+            </li>
+            {% endif %}
+          </ul>
+    </nav>
+{% block content %}
+
+{% endblock %}
+</body>
+</html>
