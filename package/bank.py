@@ -55,10 +55,5 @@ class Bank:
         return collection.find()
 
 
-bank = Bank("thlurte","BAzbSKPFjmfnDLRT","ztergon","ztergon_nodes")
-db,collection,client = bank.connector()
-
-print(list(bank.recieve(collection)))
-
 
 
