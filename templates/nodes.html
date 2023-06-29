@@ -7,5 +7,17 @@
     </h1>
 {% else %}
 <p>-_-</p>
+{{ Keys.HYPOTHESIS_USERNAME }}
+{{ Keys.HYPOTHESIS_API_KEY }}
+{{ Keys.HUGGINGFACE_API_KEY }}
+{{ bank.mdbusername}}
+{{ bank.mdbpassword }}
+{{ bank.mdbdatabase }}
+{{ bank.mdbcollection }}
+
+{% for node in recieve %}
+{{ node['_id'] }}
+{% endfor %}
+
 {% endif %}
 {% endblock %}
