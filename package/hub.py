@@ -13,3 +13,5 @@ class Hub:
     para    = { "limit":50,"user": f"acct:{self.HYPOTHESIS_USERNAME}@hypothes.is" }
     api_url = "https://hypothes.is/api/search"
     return requests.get(api_url,headers=headers,params=para).json()['rows']
+
+  def key_register(self)
