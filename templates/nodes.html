@@ -17,16 +17,19 @@
 <br>
 <div class="flex items-center justify-center">
   <div class="bg-gray-200 w-1/2 p-5 m-2 shadow-xl">
+    <div class="flex justify-between">
     <h1 class="text-left text-xl font-bold dark:text-white">{{node['title']}}</h1>
+    <p class="text-right text-sm"><i>ID : </i>{{node['_id']}}</p>
+  </div>
     <br>
     <p class="justify-center p-1"><i>Highlight : </i>{{node['highlight']}}</p>
     <br>
     <p class="justify-center p-1"><i>Annotation : </i>{{node['annotation']}}</p>
     <br>
     <div class="flex justify-between">
-      <p class="text-left">Left Content</p>
-      <p class="text-right">Right Content</p>
-    </div>s
+      <p class="text-left text-sm"><i>Created : </i>{{node['created']}}</p>
+      <p class="text-right text-sm"><i>Tags : </i>{{node['tags']}}</p>
+    </div>
   </div>
 </div>
 <br>

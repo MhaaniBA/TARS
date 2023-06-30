@@ -30,8 +30,8 @@ class Bank:
         for i in nodes:
             node = {
                 "_id": i["id"],
-                "created": i["created"],
-                "updated": i["updated"],
+                "created": i["created"][:10],
+                "updated": i["updated"][:10],
                 "url": i["uri"],
                 "annotation": i["text"],
                 "tags": i["tags"],
