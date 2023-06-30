@@ -10,7 +10,7 @@ class Bank:
         self.mdbcollection = mdbcollection
     
     def connector(self):
-        uri = f"mongodb+srv://{self.mdbusername}:{self.mdbpassword}@cluster0.ngwn7xx.mongodb.net/?retryWrites=true&w=majority"
+        uri = f"mongodb+srv://{self.mdbusername}:{self.mdbpassword}@cluster0.zjztrkc.mongodb.net/?retryWrites=true&w=majority"
 
         # Create a new client and connect to the server
         client = MongoClient(uri, server_api=ServerApi('1'))

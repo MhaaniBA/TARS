@@ -16,7 +16,15 @@
 {{ bank.mdbcollection }}
 
 {% for node in recieve %}
-{{ node['_id'] }}
+<br>
+<br>
+<p>{{ node['_id'] }}</p>
+<p>{{ node['created'] }}</p>
+<p>{{ node['updated'] }}</p>
+<p>{{ node['url'] }}</p>
+<p>{{ node['annotation'] }}</p>
+<br>
+<br>
 {% endfor %}
 
 {% endif %}
