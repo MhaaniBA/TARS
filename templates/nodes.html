@@ -6,26 +6,34 @@
       Save you API keys to use the application.
     </h1>
 {% else %}
-<p>-_-</p>
-{{ Keys.HYPOTHESIS_USERNAME }}
-{{ Keys.HYPOTHESIS_API_KEY }}
-{{ Keys.HUGGINGFACE_API_KEY }}
-{{ bank.mdbusername}}
-{{ bank.mdbpassword }}
-{{ bank.mdbdatabase }}
-{{ bank.mdbcollection }}
-
+<br>
+<br>
+<br>
+<h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white text-center">Nodes</h1>
+<br>
+<br>
+<div class="">
 {% for node in recieve %}
 <br>
+<div class="flex items-center justify-center">
+  <div class="bg-gray-200 w-1/2 p-5 m-2 shadow-xl">
+    <h1 class="text-left text-xl font-bold dark:text-white">{{node['title']}}</h1>
+    <br>
+    <p class="justify-center p-1"><i>Highlight : </i>{{node['highlight']}}</p>
+    <br>
+    <p class="justify-center p-1"><i>Annotation : </i>{{node['annotation']}}</p>
+    <br>
+    <div class="flex justify-between">
+      <p class="text-left">Left Content</p>
+      <p class="text-right">Right Content</p>
+    </div>s
+  </div>
+</div>
 <br>
-<p>{{ node['_id'] }}</p>
-<p>{{ node['created'] }}</p>
-<p>{{ node['updated'] }}</p>
-<p>{{ node['url'] }}</p>
-<p>{{ node['annotation'] }}</p>
-<br>
+
+
 <br>
 {% endfor %}
-
+</div>
 {% endif %}
 {% endblock %}
