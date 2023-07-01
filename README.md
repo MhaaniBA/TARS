@@ -15,5 +15,22 @@
 
 
 <br/>
-<p align="center">A bunch of tweaks i made to make her appearance pretty much aesthetic.. </p>
+<p align="center"> a personal learning space with flask and hypothesis.io  </p>
 <br/>
+
+## Features
+
+### Dashboard
+- plotly for visualizing the data related to the nodes captured and questions answered.
+<img src="assets/2023-07-01_22-48.png" align="center">
+
+### Nodes
+- annotations(nodes) captured from Hypothesis.io are stored in MongoDB local database
+<img src="assets/2023-07-01_22-48_1.png" align="center">
+
+### Assessment
+- HuggingFace api's to generate questions and assess answers based on the node.
+<img src="assets/2023-07-01_22-49.png" align="center">
+
+
+## Installation
