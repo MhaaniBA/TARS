@@ -18,8 +18,8 @@ class Bank:
         try:
             client.admin.command('ping')
             print("Pinged your deployment. You successfully connected to MongoDB!")
-            db = client[f'{self.mdbdatabase}']
-            collection = db[f'{self.mdbcollection}']
+            db = client['tarsdb']
+            collection = db['tarscoll']
             return db,collection,client
         except Exception as e:
             print(e)
@@ -33,7 +33,7 @@ class Bank:
         try:
             client.admin.command('ping')
             print("Pinged your deployment. You successfully connected to MongoDB!")
-            db = client[f'{self.mdbdatabase}']
+            db = client['tarsdb']
             collection = db[f'{collection}']
             return db,collection,client
         except Exception as e:
