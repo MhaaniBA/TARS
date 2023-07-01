@@ -34,3 +34,39 @@
 
 
 ## Installation
+
+### Dependancies
+
+```bash
+pip install virtualenv
+```
+
+- [MongoDB Community Edition](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-windows/)
+- [virtualenv](https://pypi.org/project/virtualenv/)
+
+### Process
+
+Clone the repo into a prefered directory.
+```bash
+git clone git@github.com:Thlurte/TARS.git
+```
+cd into the repo
+```
+cd TARS/
+```
+activate  virtual environment
+```
+source venv/bin/activate
+```
+run the application
+```
+flask --app main run
+```
+## Credits
+- [mrm8488/t5-base-finetuned-question-generation-ap](https://huggingface.co/mrm8488/t5-base-finetuned-question-generation-ap)
+- [sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2](https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2)
+
+
+
+
+
