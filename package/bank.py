@@ -10,10 +10,9 @@ class Bank:
         self.mdbcollection = mdbcollection
     
     def connector(self):
-        uri = f"mongodb+srv://{self.mdbusername}:{self.mdbpassword}@cluster0.zjztrkc.mongodb.net/?retryWrites=true&w=majority"
-
+        uri = "mongodb://localhost:27017/"
         # Create a new client and connect to the server
-        client = MongoClient(uri, server_api=ServerApi('1'))
+        client = MongoClient(uri)
 
         # Send a ping to confirm a successful connection
         try:
@@ -25,6 +24,22 @@ class Bank:
         except Exception as e:
             print(e)
 
+    def sub_connector(self,collection):
+        uri = "mongodb://localhost:27017/"
+        # Create a new client and connect to the server
+        client = MongoClient(uri)
+
+        # Send a ping to confirm a successful connection
+        try:
+            client.admin.command('ping')
+            print("Pinged your deployment. You successfully connected to MongoDB!")
+            db = client[f'{self.mdbdatabase}']
+            collection = db[f'{collection}']
+            return db,collection,client
+        except Exception as e:
+            print(e)
+
+    # Package all annotations ready for shipment (mongodb)
     def containerize(self,nodes):
         jsonpeg = []
         for i in nodes:

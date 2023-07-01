@@ -6,6 +6,31 @@
       Save you API keys to use the application.
     </h1>
 {% else %}
-<p>whatever</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="flex flex-col justify-center items-center">
+  <div class="w-3/5 m-2 p-5 bg-gray-200 rounded-lg shadow-xl">
+<p class="text-3xl text-center place-items-center">{{question}}</p>
+<br><br><br>
+<form action="/tars" method="post">
+  <div class="justify-center items-center">
+  <label for="message" class="block mb-2 text-xl text-center font-medium text-gray-900 dark:text-white">Write two different answers in both columns</label>
+
+<textarea name="input1" rows="4" class="justify-center items-center block m-1 p-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write your answer here..."></textarea>
+<br><br>
+<textarea name="input2" rows="4" class="justify-center items-center block p-1 m-1 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="and here"></textarea>
+</div>
+</form>
+</div>
+<br><br>
+<button type="submit" class="text-xl bg-gray-200 rounded-lg shadow-xl p-3 m-1 place-items-center items-center">Submit</button>
+</div>
+
 {% endif %}
 {% endblock %}

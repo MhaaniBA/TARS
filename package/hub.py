@@ -20,16 +20,23 @@ class Hub:
     Function -> returns a question based on the input
     """
     API_URL = "https://api-inference.huggingface.co/models/mrm8488/t5-base-finetuned-question-generation-ap"
-    headers = {"Authorization": "Bearer {self.HUGGINGFACE_API_KEY}"}
+    headers = {"Authorization": f"Bearer {self.HUGGINGFACE_API_KEY}"}
     peg = random.choice(jsonpeg)
     shapedpeg = f"{peg['annotation']}{peg['highlight']}"
     def query(payload):
       response = requests.post(API_URL, headers=headers, json=payload)
       return response.json()
 
-    return query({"inputs": "context: {shapedpeg}"})
+    return query({"inputs": f"context: {shapedpeg}"})[0]['generated_text'][10:],shapedpeg
 
-  def quiz_assessor(self,input):
-    pass
+  def quiz_assessor(self,input1,input2,shapedpeg):
+    API_URL = "https://api-inference.huggingface.co/models/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2"
+    headers = {"Authorization": f"Bearer {self.HUGGINGFACE_API_KEY}"}
+    def query(payload):
+	    response = requests.post(API_URL, headers=headers, json=payload)
+	    return response.json()
+
+    return query({"inputs": {"source_sentence": shapedpeg,"sentences": [input1,input2]}})
+
 
 
