@@ -52,7 +52,7 @@ pip install virtualenv
 
 Clone the repo into a prefered directory.
 ```bash
-git clone git@github.com:Thlurte/TARS.git
+git clone git@github.com:MhaaniBA/TARS.git
 ```
 cd into the repo
 ```
